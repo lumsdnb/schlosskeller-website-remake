@@ -1,10 +1,11 @@
 <script>
-	import Counter from '$lib/Counter.svelte';
+	import EventBlock from '$lib/EventBlock.svelte';
+	import { eventStore } from '$lib/eventStore';
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Schlosskeller Darmstadt</title>
+	<meta name="description" content="Kultur im Keller" />
 </svelte:head>
 
 <section>
@@ -13,17 +14,9 @@
 			<img src="seule fg.png" alt="Säule vorne" />
 		</picture>
 	</span>
-
-	Programm! geil
-
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
-	<article>Event 1</article>
-	<article>Event 2</article>
-	<article>Event 3</article>
-	<article>Event 4</article>
-	<article>Event 5</article>
+	{#each $eventStore as e}
+		<EventBlock name={e.name} description={e.description} date={e.datum} tags={e.tags} />
+	{/each}
 </section>
 <span class="seule-bg">
 	<picture>
