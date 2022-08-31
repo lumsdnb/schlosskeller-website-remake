@@ -1,79 +1,60 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from './svelte-logo.svg';
+	import Burger from '$lib/header/Hamburger.svelte';
+	let menuState = true;
 </script>
 
 <header>
-	<!-- <div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
-		</a>
-	</div> -->
-
 	<nav>
+		<span class="pagetitle"
+			><a href="/">Schlosskeller</a>
+			<Burger menuState /></span
+		>
 		<ul>
-			<span><a href="/">Schlosskeller</a></span>
 			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">programm</a></li>
 			<li class:active={$page.url.pathname === '/todos'}>
-				<a sveltekit:prefetch href="/todos">galerie</a>
+				<a sveltekit:prefetch href="/galerie">galerie</a>
 			</li>
 			<li class:active={$page.url.pathname === '/about'}>
 				<a sveltekit:prefetch href="/about">über_uns</a>
 			</li>
 		</ul>
 	</nav>
-
-	<div class="corner">
-		<!-- TODO put something else here? github link? -->
-	</div>
 </header>
 
-<style>
-	header {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-	}
-
-	nav {
-		/* display: flex; */
-		justify-content: right;
-		--background: #2c2c2c;
-		color: #d9d9d9;
-		z-index: 10;
-		width: 100%;
-	}
-
+<!-- <style>
+	
+	
 	ul {
-		position: relative;
+		position: absolute;
+		top: 6rem;
+		right: -128vw;
 		padding: 0;
 		padding-left: 4rem;
 		margin: 0;
 		height: 3em;
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
-		align-items: center;
-		list-style: none;
+		align-items: left;
 		background: var(--background);
 		background-size: contain;
+		rotate: 90deg;
+		scale: 1.2;
 	}
 
 	li {
-		position: relative;
-		height: 100%;
+		width: fit-content;
+		--background: #2c2c2c;
 	}
-
-	li.active {
-		color: var(--accent-color);
-	}
-
-	header span {
+	
+	/* header span {
 		flex-basis: 100%;
 		font-size: 2rem;
 		flex-basis: 100%;
-	}
+	} */
 
-	nav li:not(:first-child) {
+	li {
 		display: flex;
 		height: 100%;
 		align-items: space-around;
@@ -81,16 +62,61 @@
 		color: var(--heading-color);
 		font-weight: 700;
 		font-size: 1.5rem;
-		text-transform: lowercase;
-		letter-spacing: 0em;
-		text-decoration: none;
+	
 		transition: color 0.2s linear;
-		rotate: 90deg;
+		
 		position: relative;
 		top: 6rem;
 		background-color: var(--background);
 	}
 
+</style> -->
+<style>
+	header {
+		position: fixed;
+		top: 0.2rem;
+		z-index: 1;
+		font-size: 2.4rem;
+		width: 100%;
+		margin: 0.2rem 0;
+	}
+	nav {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		color: #d9d9d9;
+		z-index: 10;
+		/* width: 100%; */
+	}
+	.pagetitle {
+		width: 100%;
+		display: flex;
+		background-color: #232323;
+	}
+
+	ul {
+		position: absolute;
+		right: 0;
+		list-style: none;
+		rotate: 90deg;
+	}
+	li {
+		text-transform: lowercase;
+		text-decoration: none;
+		padding: 0.9rem;
+		width: fit-content;
+		background-color: #232323;
+	}
+	li.active {
+		text-decoration: none;
+		color: var(--accent-color);
+	}
+	a {
+		color: #eee;
+	}
 	a:hover {
 		color: var(--accent-color);
 		text-decoration: none;
