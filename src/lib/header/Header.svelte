@@ -1,23 +1,27 @@
 <script>
 	import { page } from '$app/stores';
 	import Burger from '$lib/header/Hamburger.svelte';
-	let menuState = true;
+	let menuState = false;
+	let toggleState = () => {
+		menuState != menuState;
+		console.log('haii');
+	};
 </script>
 
 <header>
 	<nav>
 		<span class="pagetitle"
 			><a href="/">Schlosskeller</a>
-			<Burger menuState /></span
+			<Burger {menuState} on:click={toggleState} /></span
 		>
 		<ul>
-			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">programm</a></li>
-			<li class:active={$page.url.pathname === '/todos'}>
-				<a sveltekit:prefetch href="/galerie">galerie</a>
-			</li>
 			<li class:active={$page.url.pathname === '/about'}>
 				<a sveltekit:prefetch href="/about">über_uns</a>
 			</li>
+			<li class:active={$page.url.pathname === '/todos'}>
+				<a sveltekit:prefetch href="/galerie">galerie</a>
+			</li>
+			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">programm</a></li>
 		</ul>
 	</nav>
 </header>
