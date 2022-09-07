@@ -39,6 +39,12 @@
 		box-sizing: border-box;
 	}
 
+	.parallax {
+		perspective: 1px;
+		height: 100vh;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
 	.seule-fg {
 		display: block;
 		position: absolute;
@@ -47,12 +53,6 @@
 		top: -2rem;
 		left: 0;
 		padding: 0;
-	}
-	.parallax {
-		perspective: 1px;
-		height: 100vh;
-		overflow-x: hidden;
-		overflow-y: auto;
 	}
 	.seule-bg {
 		transform: translateZ(-13px) scale(13);
