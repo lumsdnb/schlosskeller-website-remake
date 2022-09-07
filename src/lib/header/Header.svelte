@@ -11,8 +11,8 @@
 
 <header>
 	<nav>
-		<span class="pagetitle"
-			><a href="/"><span class="upside-down">schloss</span><span>keller</span></a>
+		<span class="pagetitle">
+    <a href="/"><span class="upside-down">schloss</span><span>keller</span></a>
 			<Burger />
 		</span>
 		{#if $menuState}
