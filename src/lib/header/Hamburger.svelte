@@ -1,23 +1,27 @@
 <script>
-	export let menuState = false;
+	import { menuState } from '$lib/eventStore';
 	let stroke1;
+	let toggleState = () => {
+		$menuState ? ($menuState = false) : ($menuState = true);
+		console.log('haii');
+	};
 </script>
 
 <div class="burgermenu">
-	<button on:click />
-	{#if menuState}
-		<svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<rect x="0.5" y="0.5" width="28.9556" height="28.9556" fill="#2C2C2C" stroke="#2C2C2C" />
-			<path d="M8 6L8 24" stroke="#EAEAEA" stroke-width="3" stroke-linecap="round" />
-			<path d="M15 6L15 21" stroke="#EAEAEA" stroke-width="3" stroke-linecap="round" />
-			<path d="M22 6L22 23" stroke="#EAEAEA" stroke-width="3" stroke-linecap="round" />
-		</svg>
-	{:else}
+	<button on:click={() => toggleState()} />
+	{#if $menuState}
 		<svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<rect x="0.5" y="0.5" width="28.9556" height="28.9556" fill="#2C2C2C" stroke="#2C2C2C" />
 			<path d="M8 27V30" stroke="#EAEAEA" stroke-width="3" stroke-linecap="round" />
 			<path d="M15 27V30" stroke="#EAEAEA" stroke-width="3" stroke-linecap="round" />
 			<path d="M22 27L22 30" stroke="#EAEAEA" stroke-width="3" stroke-linecap="round" />
+		</svg>
+	{:else}
+		<svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<rect x="0.5" y="0.5" width="28.9556" height="28.9556" fill="#2C2C2C" stroke="#2C2C2C" />
+			<path d="M8 6L8 24" stroke="#EAEAEA" stroke-width="3" stroke-linecap="round" />
+			<path d="M15 6L15 21" stroke="#EAEAEA" stroke-width="3" stroke-linecap="round" />
+			<path d="M22 6L22 23" stroke="#EAEAEA" stroke-width="3" stroke-linecap="round" />
 		</svg>
 	{/if}
 </div>
@@ -27,7 +31,8 @@
 		width: 3.6rem;
 		height: 3.6rem;
 		background-color: #232323;
-		border: white solid 1px;
+		/* border: white solid 1px; */
+		z-index: 10;
 	}
 	button {
 		position: absolute;
