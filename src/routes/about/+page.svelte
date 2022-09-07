@@ -14,15 +14,6 @@
 	</p>
 
 	<p>
-		Der Schlossgarten ist ein Projekt des Schlosskellers und 2010 neu hinzugekommen. Der Biergarten
-		(und Café) befindet sich auf der Schlossbastion mitten im Hainbuchenhain. Die Saison im Garten
-		orientiert sich an den Sommersemesterzeiten von April bis September. Der Schlossgarten
-		präsentiert sich – wie auch der Schlosskeller – als eine Schnittstelle zwischen den Studierenden
-		und Mitarbeitern_Innen der TU Darmstadt sowie den Darmstädter Bürgern_Innen. Er bietet durch
-		seine ruhige Lage und sein gemütliches Ambiente einen Platz zum gemeinsamen Verweilen.
-	</p>
-
-	<p>
 		Die Preispolitik der angebotenen Getränke und Speisen richtet sich generell an studentisches
 		Publikum. Der Schlosskeller ist kein gewinnorientiertes Unternehmen, schafft aber dennoch
 		Arbeitsplätze. Er bietet eine Aufwertung des studentischen Lebens, von Studierenden für
@@ -37,6 +28,15 @@
 		in Form der Kulturhäppchen-Reihe, Vorträge, Kinoabende oder Konzert- und Clubevents. Viele
 		Veranstaltungen werden regelmäßig angeboten, wobei wir immer darauf bedacht sind unsere Konzepte
 		zu optimieren und neue Ideen einfließen zu lassen.
+	</p>
+
+	<p>
+		Der Schlossgarten ist ein Projekt des Schlosskellers und 2010 neu hinzugekommen. Der Biergarten
+		(und Café) befindet sich auf der Schlossbastion mitten im Hainbuchenhain. Die Saison im Garten
+		orientiert sich an den Sommersemesterzeiten von April bis September. Der Schlossgarten
+		präsentiert sich – wie auch der Schlosskeller – als eine Schnittstelle zwischen den Studierenden
+		und Mitarbeitern_Innen der TU Darmstadt sowie den Darmstädter Bürgern_Innen. Er bietet durch
+		seine ruhige Lage und sein gemütliches Ambiente einen Platz zum gemeinsamen Verweilen.
 	</p>
 </div>
 

@@ -29,7 +29,7 @@ export const eventStore = writable([
 	},
 	{
 		id: 4,
-		name: 'mittwoch saufi',
+		name: 'feierabend',
 		datum: '1-1-2023',
 		description:
 			'Enim amet non minim aliquip esse. Ullamco laboris incididunt minim velit nostrud occaecat magna pariatur irure voluptate et Lorem. Exercitation duis fugiat incididunt ad nisi adipisicing veniam deserunt.',

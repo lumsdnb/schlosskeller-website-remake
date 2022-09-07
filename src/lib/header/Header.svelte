@@ -11,14 +11,14 @@
 
 <header>
 	<nav>
-		<span class="pagetitle"
-			><a href="/">Schlosskeller</a>
+		<span class="pagetitle">
+    <a href="/"><span class="upside-down">schloss</span><span>keller</span></a>
 			<Burger />
 		</span>
 		{#if $menuState}
 			<ul use:clickOutside on:click_outside={handleClickOutside}>
 				<li class:active={$page.url.pathname === '/about'}>
-					<a sveltekit:prefetch href="/about">über_uns</a>
+					<a sveltekit:prefetch href="/about">über uns</a>
 				</li>
 				<li class:active={$page.url.pathname === '/galerie'}>
 					<a sveltekit:prefetch href="/galerie">galerie</a>
@@ -34,11 +34,11 @@
 <style>
 	header {
 		position: fixed;
-		top: 0.2rem;
+		top: 0;
 		z-index: 1;
 		font-size: 2.4rem;
 		width: 100%;
-		margin: 0.2rem 0;
+		margin: 0;
 	}
 	nav {
 		position: absolute;
@@ -54,10 +54,23 @@
 	.pagetitle {
 		width: 100%;
 		display: flex;
+		flex-direction: row;
 		background-color: #232323;
 		justify-content: space-between;
 		padding: 0 0.5rem;
 		align-items: center;
+		font-weight: 500;
+	}
+
+	.pagetitle a {
+		display: flex;
+	}
+	.upside-down {
+		display: block;
+		rotate: 180deg;
+		position: relative;
+		top: 0.41rem;
+		font-weight: 400;
 	}
 
 	ul {
