@@ -7,30 +7,61 @@
 
 <details>
 	<summary>
+		<picture
+			><img src="https://source.unsplash.com/random/200×50/?fruit" alt="" srcset="" /></picture
+		>
 		<span class="event-type">{tags[0]}</span>
 		<span class="event-name">{name}</span>
 		<span class="event-date">{date}</span>
 	</summary>
-	test
-	{description}
-	<p>
-		{#each tags as t}
-			<span class="tag">{t}</span>
-		{/each}
+	<p class="event-description">
+		{description}
 	</p>
+
+	<div class="flex-split">
+		<p>
+			{#each tags as t}
+				<span class="tag">{t}</span>
+			{/each}
+		</p>
+		<p class="price">eintritt frei!</p>
+	</div>
 </details>
 
 <style>
+	.flex-split {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.price {
+		padding-left: 1rem;
+	}
+
 	details {
-		padding: 0.3rem;
-		margin: 0.2rem;
+		padding: 0.4rem;
+		margin: 0.4rem;
 		z-index: 10;
 		width: 100%;
-		background-image: url(https://source.unsplash.com/random/300×100/?fruit);
-		background-size: cover;
+		background-color: #232323aa;
+		color: #eee;
+		max-width: 900px;
+		user-select: none;
+	}
+
+	details:hover {
+		cursor: pointer;
+		transition: background-color 50ms;
+		background-color: #232323fa;
 	}
 	details[open] summary ~ * {
 		animation: sweep 0.5s ease-in-out;
+	}
+
+	details[open] {
+		transition: background-color 50ms;
+		background-color: #232323fa;
 	}
 
 	@keyframes sweep {
@@ -45,25 +76,37 @@
 	}
 	summary {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		flex-wrap: wrap;
 		position: relative;
+		max-height: 5rem;
+		max-width: 100vw;
+		align-items: center;
+	}
+
+	img {
+		position: relative;
+		width: 150px;
+		height: 90px;
 	}
 
 	.event-name {
 		padding: 1rem;
-		background-color: #232323;
+		/* background-color: #232323; */
 		color: #eee;
 		font-weight: 900;
 		width: fit-content;
-		font-size: 1.2rem;
+		font-size: 1rem;
 	}
 	.event-type {
+		position: absolute;
 		padding: 0.2rem;
 		font-weight: 400;
 		width: fit-content;
 		font-size: 1.2rem;
 		flex-basis: 1;
+		background-color: #232323;
+		rotate: 20deg;
 	}
 	.event-date {
 		position: absolute;
@@ -71,6 +114,13 @@
 		background-color: aquamarine;
 		padding: 0.2rem;
 		text-decoration: wavy;
+		color: #232323;
+	}
+
+	.event-description {
+		padding: 0.2rem;
+		margin-top: 20px;
+		max-width: 80%;
 	}
 
 	.tag {
