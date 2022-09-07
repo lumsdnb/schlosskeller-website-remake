@@ -96,7 +96,7 @@
 		color: #eee;
 		font-weight: 900;
 		width: fit-content;
-		font-size: 1.4rem;
+		font-size: 1rem;
 	}
 	.event-type {
 		position: absolute;
