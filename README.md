@@ -1,8 +1,6 @@
 # Schlosskeller website redesign
 
-## design board
-
-https://www.figma.com/file/Z8UT3I2ochF0A60sGhnJM0/schlosskeller-website-redesign?node-id=0%3A1
+[design board](https://www.figma.com/file/Z8UT3I2ochF0A60sGhnJM0/schlosskeller-website-redesign?node-id=0%3A1)
 
 ## Developing
 
@@ -21,10 +19,16 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+> Deployment is currently handled with Netlify [adapter](https://kit.svelte.dev/docs/adapters)
 
 ## todo
 
-- fix burger menu (button doesnt close it)
 - add some styling to about page (for images and stuff)
--
+- about copy (get someone else to do this)
+- gallery
+- add nice looking graphics (pillars)
+- make sure content doesnt get lost behind pillar
+- check if footer works properly (i think it doesnt)
+- dynamic tag system
+- ghost integration
+- language selector?
