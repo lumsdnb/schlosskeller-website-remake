@@ -36,6 +36,7 @@
 		width: 100%;
 		max-width: 95vw;
 		margin: 0 auto;
+		margin-top: 5rem;
 		box-sizing: border-box;
 	}
 
@@ -72,10 +73,7 @@
 		justify-content: center;
 		align-items: center;
 		padding: 40px;
-	}
-
-	footer a {
-		font-weight: bold;
+		z-index: 50;
 	}
 
 	@media (min-width: 480px) {

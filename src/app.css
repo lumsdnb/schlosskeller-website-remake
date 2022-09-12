@@ -78,7 +78,13 @@ body::before {
 }
 
 h1,
-h2,
+h2 {
+	width: fit-content;
+	padding: 0.5rem;
+	color: var(--heading-color);
+	background-color: var(--tertiary-color);
+}
+
 p {
 	font-weight: 400;
 	color: var(--heading-color);
