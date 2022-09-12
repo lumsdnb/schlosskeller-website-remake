@@ -86,8 +86,8 @@
 
 	img {
 		position: relative;
-		width: 150px;
-		height: 90px;
+		width: 150px; /* change to auto once img size is defined */
+		height: 5rem; /* same as summary */
 	}
 
 	.event-name {
