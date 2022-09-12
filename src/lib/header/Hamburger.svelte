@@ -1,14 +1,10 @@
 <script>
 	import { menuState } from '$lib/eventStore';
 	let stroke1;
-	let toggleState = () => {
-		$menuState ? ($menuState = false) : ($menuState = true);
-		console.log('haii');
-	};
 </script>
 
 <div class="burgermenu">
-	<button on:click={() => toggleState()} />
+	<input type="checkbox" name="" id="burgertoggle" bind:checked={$menuState} />
 	{#if $menuState}
 		<svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<rect x="0.5" y="0.5" width="28.9556" height="28.9556" fill="#2C2C2C" stroke="#2C2C2C" />
@@ -34,7 +30,7 @@
 		/* border: white solid 1px; */
 		z-index: 10;
 	}
-	button {
+	#burgertoggle {
 		position: absolute;
 		top: 0;
 		width: 100%;
@@ -43,7 +39,7 @@
 		background-color: #444;
 		opacity: 0;
 	}
-	button:hover {
+	#burgertoggle:hover {
 		cursor: crosshair;
 	}
 </style>

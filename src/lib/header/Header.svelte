@@ -4,7 +4,7 @@
 	import { menuState } from '$lib/eventStore';
 	import { clickOutside } from '$lib/clickOutside.js';
 
-	function handleClickOutside(event) {
+	function hideMenu(event) {
 		$menuState = false;
 	}
 </script>
@@ -12,19 +12,19 @@
 <header>
 	<nav>
 		<span class="pagetitle">
-    <a href="/"><span class="upside-down">schloss</span><span>keller</span></a>
+			<a href="/"><span class="upside-down">schloss</span><span>keller</span></a>
 			<Burger />
 		</span>
 		{#if $menuState}
-			<ul use:clickOutside on:click_outside={handleClickOutside}>
+			<ul use:clickOutside on:click_outside={hideMenu}>
 				<li class:active={$page.url.pathname === '/about'}>
-					<a sveltekit:prefetch href="/about">über uns</a>
+					<a sveltekit:prefetch on:click={() => hideMenu()} href="/about">über uns</a>
 				</li>
 				<li class:active={$page.url.pathname === '/galerie'}>
-					<a sveltekit:prefetch href="/galerie">galerie</a>
+					<a sveltekit:prefetch on:click={() => hideMenu()} href="/galerie">galerie</a>
 				</li>
 				<li class:active={$page.url.pathname === '/'}>
-					<a sveltekit:prefetch href="/">programm</a>
+					<a sveltekit:prefetch on:click={() => hideMenu()} href="/">programm</a>
 				</li>
 			</ul>
 		{/if}
