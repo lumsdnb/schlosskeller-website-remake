@@ -110,10 +110,11 @@
 	}
 	.event-date {
 		position: absolute;
-		right: 1rem;
-		background-color: aquamarine;
+		top: 0;
+		right: 0;
+		background-color: var(--heading-color);
 		padding: 0.2rem;
-		text-decoration: wavy;
+		font-size: 0.9rem;
 		color: #232323;
 	}
 
